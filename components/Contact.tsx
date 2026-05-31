@@ -95,7 +95,7 @@ export const Contact: React.FC = () => {
               {/* Quick Details Cards */}
               <div className="space-y-4 font-mono text-sm">
                 <a
-                  href="mailto:gautamjat@gmail.com"
+                  href="mailto:codergautam7@gmail.com"
                   className="flex items-center gap-4 p-4 bg-bg-primary border border-border-custom hover:border-accent/40 rounded-lg group transition-all duration-300"
                 >
                   <div className="p-2.5 bg-accent/10 border border-accent/20 rounded text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
@@ -103,7 +103,7 @@ export const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs text-text-secondary font-semibold uppercase">Email Me</p>
-                    <p className="text-text-primary text-xs md:text-sm font-bold mt-0.5">gautamjat@gmail.com</p>
+                    <p className="text-text-primary text-xs md:text-sm font-bold mt-0.5">codergautam7@gmail.com</p>
                   </div>
                 </a>
 
@@ -185,7 +185,7 @@ export const Contact: React.FC = () => {
                         onChange={handleChange}
                         disabled={status === 'submitting'}
                         className="w-full bg-bg-secondary border border-border-custom focus:border-accent focus:glow-box focus:outline-none rounded px-4 py-3 text-sm text-text-primary font-sans transition-all duration-300 disabled:opacity-50"
-                        placeholder="e.g. gautamjat@gmail.com"
+                        placeholder="e.g. codergautam7@gmail.com"
                       />
                     </div>
                   </div>

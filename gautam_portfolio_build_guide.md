@@ -379,7 +379,7 @@ Subtitle: Have a project in mind or want to collaborate?
 [OR divider]
 
 [Direct Contact]
-  📧 gautamjat@gmail.com
+  📧 codergautam7@gmail.com
   📍 Jaipur, Rajasthan, India
   🔗 LinkedIn: Gautam Choudhary
 ```
@@ -655,4 +655,4 @@ gautam-portfolio/
 ---
 
 *Built for Gautam Choudhary | Web Developer | Jaipur, Rajasthan*
-*Contact: gautamjat@gmail.com | LinkedIn: Gautam Choudhary*
+*Contact: codergautam7@gmail.com | LinkedIn: Gautam Choudhary*

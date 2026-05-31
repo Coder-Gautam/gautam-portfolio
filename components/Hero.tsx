@@ -138,7 +138,7 @@ export const Hero: React.FC = () => {
               <Linkedin size={22} />
             </a>
             <a
-              href="mailto:gautamjat@gmail.com"
+              href="mailto:codergautam7@gmail.com"
               className="text-text-secondary hover:text-accent-alt transition-all duration-300 hover:scale-110"
               aria-label="Email"
             >
