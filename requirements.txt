@@ -1,0 +1,10 @@
+# Python dependencies (Used for PDF resume parsing and text extraction)
+pypdf>=6.12.2
+
+# Note: This is a Next.js/React project. 
+# Node.js dependencies are managed in package.json and include:
+# - next (v16.2.6)
+# - react (v19.2.4)
+# - react-dom (v19.2.4)
+# - framer-motion (v12.40.0)
+# - lucide-react (v0.475.0)

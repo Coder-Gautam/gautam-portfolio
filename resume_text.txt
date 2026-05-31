@@ -1,0 +1,48 @@
+--- Page 1 ---
+Gautam Choudhary
+Phone-Alt8619640908 | Envelopegautamjat@gmail.com | LINKEDINGautam Choudhary | Map-marker-altJaipur, Rajasthan
+EXPERIENCE
+ITXITPro Sep. 2025 – Present
+Web Developer Jaipur, Rajasthan
+• Took ownership of end-to-end project delivery, from requirement analysis and planning to development, testing, and
+deployment.
+• Served as a technical point of contact for junior team members, providing guidance on development standards,
+architecture decisions, and troubleshooting.
+• Evaluated new project requirements and recommended suitable technology stacks, workﬂows, and implementation
+approaches to ensure scalable solutions.
+Drift Point Technologies Pvt. Ltd. Mar. 2024 – Sept. 2025
+Web Developer Jaipur, Rajasthan
+• Delivered 10+ client websites using WordPress, ensuring responsive design, performance optimization, and
+seamless user experiences.
+• Designed website templates, landing pages, and branding assets in Figma and Photoshop for web and social media
+campaigns.
+• Developed frontend features for the T estNHire platform using React.js and Next.js, contributing to both the admin
+dashboard and user-facing interfaces.
+• Collaborated closely with developers, designers, and stakeholders to transform design concepts into production-ready
+web applications.
+• Built reusable UI components and maintained design consistency across multiple projects, reducing development
+eﬀort and improving scalability.
+PROJECTS
+Hyku Consulting
+∗ Mentored 15 students towards acceptance at top US boarding schools; achieved 100% success rate
+∗ Designed a collaborative learning ecosystem for students and parents with Trello, Miro, and Google Suite
+Minimal Icon Pack
+∗ Designed and released 100+ minimal iOS and Android icons from scratch using Procreate and Figma
+∗ Marketed the product and design process on YouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTubeYouTube; accumulated over $250 in sales on GumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroadGumroad
+CommonIntern
+∗ Built a Python script to automatically apply to jobs on Glassdoor using BeautifulSoup and Selenium
+∗ 500 stars on GitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHubGitHub; featured on HackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackadayHackaday; made the front page of r/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/pythonr/python and r/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programmingr/programming
+EDUCATION
+Jaipur National University Aug. 2021 – May 2024
+Bachelor of Computer Application Jaipur, Rajasthan
+∗ Focused on core computer science concepts including programming, data structures, database management systems,
+operating systems, and software development.
+∗ Developed practical skills in problem-solving, application development, and computer technologies through academic
+projects and coursework.
+--- Page 2 ---
+SKILLS
+Languages : JavaScript, React.js, HTML/CSS, T ypescript, PHP , Laraval, Next.js, Material UI, Bootstrap, T ailwind CSS
+Developer Tools : Figma, Google Analytics, Git, GitHub, OBS, Vs Code
+Databases : MySQL, MongoDB, Oracle
+Soft Skills : Problem-Solving, T eam Collaboration, Adaptability, Communication
+Ai Tools : Antigravity, GitHub Copilot, Claude, Cursor, Codex, Gemini CLI, ChatGPT , Google Stitch
