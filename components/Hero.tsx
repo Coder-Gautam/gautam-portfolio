@@ -144,10 +144,10 @@ export const Hero: React.FC = () => {
         </motion.div>
 
         {/* Scroll down indicator arrow at bottom */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-secondary opacity-60 hover:opacity-100 transition-opacity duration-300">
+        {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-secondary opacity-60 hover:opacity-100 transition-opacity duration-300">
           <span className="font-mono text-[10px] tracking-[0.2em] uppercase">Scroll</span>
           <ArrowDown size={14} className="animate-bounce" />
-        </div>
+        </div> */}
       </div>
     </section>
   );
