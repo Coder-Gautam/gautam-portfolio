@@ -14,7 +14,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({ label, title }) => {
       <h2 className="text-3xl md:text-4xl font-bold font-mono text-text-primary tracking-tight">
         {title}
       </h2>
-      <div className="w-16 h-[3px] bg-accent mt-4 rounded-full shadow-[0_0_8px_rgba(57,255,20,0.5)]" />
+      <div className="w-16 h-[3px] bg-gradient-to-r from-accent to-accent-alt mt-4 rounded-full shadow-[0_0_12px_rgba(124,92,255,0.45)]" />
     </div>
   );
 };

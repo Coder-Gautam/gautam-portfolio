@@ -21,7 +21,7 @@ const projectsData = [
     title: 'Minimal Icon Pack',
     description: 'Designed and released 100+ minimal iOS and Android custom icons from scratch. Built a complete workflow, promoted via YouTube, and sold globally.',
     tags: ['Figma', 'Procreate', 'Branding', 'iOS', 'Android'],
-    highlight: '$250+ Sales &bull; 100+ Icons',
+    highlight: '$250+ Sales | 100+ Icons',
     icon: <Sparkles size={18} className="text-accent" />,
     links: {
       github: '#',
@@ -32,7 +32,7 @@ const projectsData = [
     title: 'CommonIntern',
     description: 'Automated job application pipelines on Glassdoor using web scraping scripts. Handled rate limits and sessions, gaining massive open-source momentum.',
     tags: ['Python', 'BeautifulSoup', 'Selenium', 'Automation'],
-    highlight: '500+ Stars &bull; Hackaday Front Page',
+    highlight: '500+ Stars | Hackaday Front Page',
     icon: <Star size={18} className="text-accent" />,
     links: {
       github: 'https://github.com',
@@ -64,7 +64,7 @@ const cardVariants = {
 
 export const Projects: React.FC = () => {
   return (
-    <section id="projects" className="w-full py-20 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="projects" className="w-full py-20 bg-bg-primary relative overflow-hidden">
       {/* Visual neon light leak */}
       <div className="absolute left-0 bottom-1/4 w-80 h-80 bg-accent/5 rounded-full filter blur-[120px] pointer-events-none" />
 
@@ -85,11 +85,11 @@ export const Projects: React.FC = () => {
             viewport={{ once: true, amount: 0.1 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12"
           >
-            {projectsData.map((project, idx) => (
+            {projectsData.map((project) => (
               <motion.div
                 key={project.title}
                 variants={cardVariants}
-                whileHover={{ y: -6, borderColor: 'rgba(57, 255, 20, 0.5)', boxShadow: '0 10px 30px -15px rgba(57,255,20,0.15)' }}
+                whileHover={{ y: -8, borderColor: 'rgba(124, 92, 255, 0.5)', boxShadow: '0 20px 45px -24px rgba(56,189,248,0.35)' }}
                 transition={{ duration: 0.25, ease: 'easeInOut' as const }}
                 className="bg-bg-card border border-border-custom hover:shadow-lg rounded-lg p-6 flex flex-col justify-between h-full group"
               >

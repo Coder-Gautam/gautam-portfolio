@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full bg-[#0a0a0a] border-t border-border-custom py-12 relative overflow-hidden select-none">
+    <footer className="w-full bg-bg-primary border-t border-border-custom py-12 relative overflow-hidden select-none">
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col items-center justify-between gap-6 md:flex-row">
         
         {/* Left branding */}
@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             onClick={handleScrollToTop}
             className="font-mono text-lg font-bold text-accent hover:glow transition-all duration-300"
           >
-            GC<span className="text-[#f0f0f0]">.</span>
+            GC<span className="text-text-primary">.</span>
           </a>
           <p className="text-text-secondary text-xs font-mono">
             Made with <span className="text-accent animate-pulse">&hearts;</span> in Jaipur, Rajasthan
@@ -32,13 +32,13 @@ export const Footer: React.FC = () => {
         {/* Middle quick links or copyright */}
         <div className="text-center md:text-right font-sans text-xs text-text-secondary">
           <p>&copy; {currentYear} Gautam Choudhary. All rights reserved.</p>
-          <p className="mt-1 text-[10px] font-mono tracking-wider text-accent/50 uppercase">Web Developer &bull; UI/UX</p>
+          <p className="mt-1 text-[10px] font-mono tracking-wider text-accent/50 uppercase">Web Developer | UI/UX</p>
         </div>
 
         {/* Right social links */}
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com/YOUR_USERNAME"
+            href="https://github.com/Coder-Gautam"
             target="_blank"
             rel="noopener noreferrer"
             className="text-text-secondary hover:text-accent transition-all duration-300 hover:scale-110"

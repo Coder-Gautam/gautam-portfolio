@@ -36,7 +36,7 @@ const skillsData = [
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="w-full py-20 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="about" className="w-full py-20 bg-bg-primary relative overflow-hidden">
       {/* Decorative vertical divider or background graphic */}
       <div className="absolute right-0 top-1/4 w-72 h-72 bg-accent/5 rounded-full filter blur-[100px] pointer-events-none" />
       
@@ -54,7 +54,7 @@ export const About: React.FC = () => {
             <div className="lg:col-span-7 flex flex-col space-y-8">
               <div className="space-y-4 text-text-secondary text-base leading-relaxed font-sans">
                 <p>
-                  I'm a dedicated Web Developer with 2+ years of professional experience building
+                  I&apos;m a dedicated Web Developer with 2+ years of professional experience building
                   modern, high-performance web applications. I specialize in <strong className="text-text-primary">React.js and Next.js</strong> for frontend engineering, backed by solid database integrations and responsive design principles.
                 </p>
                 <p>
@@ -78,7 +78,7 @@ export const About: React.FC = () => {
                     <h4 className="font-bold text-text-primary text-sm font-mono">Jaipur National University</h4>
                     <span className="text-accent font-mono text-xs font-medium">Aug. 2021 – May 2024</span>
                   </div>
-                  <p className="text-text-secondary text-sm mb-3">Bachelor of Computer Application (BCA) &bull; Jaipur, Rajasthan</p>
+                  <p className="text-text-secondary text-sm mb-3">Bachelor of Computer Application (BCA) | Jaipur, Rajasthan</p>
                   <p className="text-text-secondary text-xs leading-relaxed font-sans border-l-2 border-border-custom pl-3">
                     Focused on core computer science concepts including programming paradigms, data structures, 
                     database systems, and software engineering. Developed practical troubleshooting skills through rigorous 

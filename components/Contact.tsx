@@ -59,9 +59,9 @@ export const Contact: React.FC = () => {
           throw new Error('Something went wrong. Please try again.');
         }
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus('error');
-      setErrorMessage(err.message || 'Failed to submit form. Please contact me directly via email.');
+      setErrorMessage(err instanceof Error ? err.message : 'Failed to submit form. Please contact me directly via email.');
     }
   };
 
@@ -77,14 +77,14 @@ export const Contact: React.FC = () => {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6, ease: 'easeOut' as const }}
         >
-          <SectionTitle label="04. CONTACT" title="Let's Work Together" />
+          <SectionTitle label="04. CONTACT" title="Let&apos;s Work Together" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             {/* Direct Details & Info */}
             <div className="lg:col-span-5 flex flex-col justify-between space-y-8 lg:space-y-0">
               <div className="space-y-6">
                 <h3 className="text-xl font-bold font-mono text-text-primary">
-                  Let's create something extraordinary.
+                  Let&apos;s create something extraordinary.
                 </h3>
                 <p className="text-text-secondary text-sm md:text-base leading-relaxed font-sans">
                   Have an exciting project, a role open, or simply want to say hello? Drop me a message
@@ -98,7 +98,7 @@ export const Contact: React.FC = () => {
                   href="mailto:gautamjat@gmail.com"
                   className="flex items-center gap-4 p-4 bg-bg-primary border border-border-custom hover:border-accent/40 rounded-lg group transition-all duration-300"
                 >
-                  <div className="p-2.5 bg-accent/10 border border-accent/20 rounded text-accent group-hover:bg-accent group-hover:text-[#0a0a0a] transition-all duration-300">
+                  <div className="p-2.5 bg-accent/10 border border-accent/20 rounded text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
                     <Mail size={16} />
                   </div>
                   <div>
@@ -123,7 +123,7 @@ export const Contact: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-bg-primary border border-border-custom hover:border-accent/40 rounded-lg group transition-all duration-300"
                 >
-                  <div className="p-2.5 bg-accent/10 border border-accent/20 rounded text-accent group-hover:bg-accent group-hover:text-[#0a0a0a] transition-all duration-300">
+                  <div className="p-2.5 bg-accent/10 border border-accent/20 rounded text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
                     <Linkedin size={16} />
                   </div>
                   <div>
@@ -142,7 +142,7 @@ export const Contact: React.FC = () => {
                   {status === 'success' && (
                     <div className="p-4 bg-accent/10 border border-accent/30 text-accent rounded flex items-center gap-3 text-sm font-mono select-none">
                       <CheckCircle2 size={18} className="shrink-0" />
-                      <span>Message sent successfully! I'll get back to you soon.</span>
+                      <span>Message sent successfully! I&apos;ll get back to you soon.</span>
                     </div>
                   )}
 
@@ -211,12 +211,12 @@ export const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full py-3.5 bg-accent text-[#0a0a0a] font-mono text-xs md:text-sm font-bold uppercase tracking-wider rounded shadow-[0_0_15px_rgba(57,255,20,0.3)] hover:shadow-[0_0_25px_rgba(57,255,20,0.5)] active:scale-[0.98] hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
+                    className="w-full py-3.5 bg-gradient-to-r from-accent to-accent-alt text-white font-mono text-xs md:text-sm font-bold uppercase tracking-wider rounded-md shadow-[0_14px_40px_rgba(124,92,255,0.3)] hover:shadow-[0_18px_52px_rgba(56,189,248,0.28)] active:scale-[0.98] hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
                   >
                     {status === 'submitting' ? (
                       <>
                         Sending Message
-                        <span className="inline-block w-4 h-4 border-2 border-[#0a0a0a] border-t-transparent rounded-full animate-spin" />
+                        <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       </>
                     ) : (
                       <>

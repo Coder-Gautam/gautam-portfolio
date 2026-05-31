@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowDown, Sparkles, Code2, Palette } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,96 +46,100 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center pt-16 overflow-hidden grid-bg select-none">
-      {/* Background radial gradient overlay for focus */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent pointer-events-none z-10" />
-      <div className="absolute inset-0 bg-radial-gradient(circle_at_center,transparent_20%,#0a0a0a_80%) pointer-events-none z-10" />
+    <section className="relative w-full min-h-screen flex items-center justify-center pt-20 overflow-hidden grid-bg select-none">
+      <div className="absolute inset-0 aurora-bg pointer-events-none" />
+      <motion.div
+        className="absolute -top-28 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-accent/25 blur-[110px]"
+        animate={{ scale: [1, 1.16, 1], opacity: [0.35, 0.65, 0.35] }}
+        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="absolute right-[-8rem] top-24 h-80 w-80 rounded-full bg-accent-alt/15 blur-[120px]"
+        animate={{ y: [0, 24, 0], x: [0, -12, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/10 via-bg-primary/45 to-bg-primary pointer-events-none z-10" />
       
-      <div className="max-w-4xl mx-auto px-4 md:px-8 relative z-20 text-center flex flex-col items-center">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-20 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="flex flex-col items-center"
+          className="flex flex-col items-center text-center lg:items-start lg:text-left"
         >
-          {/* Tagline intro */}
           <motion.span 
             variants={itemVariants}
-            className="font-mono text-accent text-xs md:text-sm tracking-[0.25em] uppercase mb-4 py-1 px-3 bg-accent/5 border border-accent/15 rounded-full"
+            className="font-mono text-accent text-xs md:text-sm tracking-[0.22em] uppercase mb-5 py-1.5 px-4 bg-accent/10 border border-accent/20 rounded-full shadow-[0_0_30px_rgba(124,92,255,0.16)]"
           >
-            Hi, I'm
+            Available for modern web projects
           </motion.span>
 
-          {/* Main Name */}
           <motion.h1 
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold font-mono tracking-tight mb-4 text-[#f0f0f0]"
+            className="text-5xl md:text-7xl xl:text-8xl font-bold font-mono tracking-tight mb-5 text-text-primary leading-[0.95]"
           >
-            <span className="text-accent glow">Gautam</span> Choudhary
+            Gautam <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-alt to-[#f8fbff] glow">Choudhary</span>
           </motion.h1>
 
-          {/* Subtitle / Role */}
           <motion.h2 
             variants={itemVariants}
             className="text-lg md:text-2xl font-mono text-text-secondary tracking-wide mb-6 cursor-blink font-medium"
           >
-            Web Developer &bull; UI/UX &bull; React & Next.js
+            Web Developer | UI/UX | React & Next.js
           </motion.h2>
 
-          {/* Tagline description */}
           <motion.p 
             variants={itemVariants}
-            className="text-text-secondary text-sm md:text-lg max-w-xl mb-10 leading-relaxed font-sans"
+            className="text-text-secondary text-sm md:text-lg max-w-2xl mb-9 leading-relaxed font-sans"
           >
-            Building fast, highly performant, and beautiful web experiences from Jaipur, Rajasthan.
+            I craft fast, polished, and conversion-focused web experiences with clean interfaces,
+            smooth interactions, and production-ready frontend architecture.
           </motion.p>
 
-          {/* CTA Buttons */}
           <motion.div 
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 w-full font-mono text-sm"
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10 w-full font-mono text-sm"
           >
             <button
               onClick={handleScrollToProjects}
-              className="w-full sm:w-auto px-8 py-3 bg-accent text-[#0a0a0a] font-bold rounded shadow-[0_0_15px_rgba(57,255,20,0.4)] hover:shadow-[0_0_25px_rgba(57,255,20,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-accent to-accent-alt text-white font-bold rounded-md shadow-[0_14px_40px_rgba(124,92,255,0.34)] hover:shadow-[0_18px_55px_rgba(56,189,248,0.28)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
               View My Work <ArrowDown size={16} className="animate-bounce" />
             </button>
             <a
               href="/resume.pdf"
               download="Gautam_Choudhary_Resume.pdf"
-              className="w-full sm:w-auto px-8 py-3 border border-accent text-accent font-bold rounded hover:bg-accent/5 hover:shadow-[0_0_15px_rgba(57,255,20,0.2)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center"
+              className="w-full sm:w-auto px-8 py-3 border border-accent/50 text-text-primary font-bold rounded-md hover:bg-accent/10 hover:border-accent hover:shadow-[0_0_24px_rgba(124,92,255,0.18)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center"
             >
               Download Resume
             </a>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div 
             variants={itemVariants}
-            className="flex items-center gap-6"
+            className="flex items-center gap-5"
           >
             <a
-              href="https://github.com/YOUR_USERNAME" // placeholder to be filled or general
+              href="https://github.com/Coder-Gautam"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-secondary hover:text-accent transition-all duration-300 hover:scale-110"
+              className="text-text-secondary hover:text-accent-alt transition-all duration-300 hover:scale-110"
               aria-label="GitHub"
             >
               <Github size={22} />
             </a>
             <a
-              href="https://linkedin.com/in/Gautam Choudhary" // space fits name
+              href="https://linkedin.com/in/Gautam Choudhary"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-secondary hover:text-accent transition-all duration-300 hover:scale-110"
+              className="text-text-secondary hover:text-accent-alt transition-all duration-300 hover:scale-110"
               aria-label="LinkedIn"
             >
               <Linkedin size={22} />
             </a>
             <a
               href="mailto:gautamjat@gmail.com"
-              className="text-text-secondary hover:text-accent transition-all duration-300 hover:scale-110"
+              className="text-text-secondary hover:text-accent-alt transition-all duration-300 hover:scale-110"
               aria-label="Email"
             >
               <Mail size={22} />
@@ -143,11 +147,50 @@ export const Hero: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Scroll down indicator arrow at bottom */}
-        {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-secondary opacity-60 hover:opacity-100 transition-opacity duration-300">
-          <span className="font-mono text-[10px] tracking-[0.2em] uppercase">Scroll</span>
-          <ArrowDown size={14} className="animate-bounce" />
-        </div> */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.45, ease: 'easeOut' as const }}
+          className="relative hidden lg:block"
+        >
+          <motion.div
+            className="glass-panel relative mx-auto w-full max-w-md rounded-2xl p-6"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <div className="mb-6 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="h-3 w-3 rounded-full bg-red-400" />
+                <span className="h-3 w-3 rounded-full bg-yellow-300" />
+                <span className="h-3 w-3 rounded-full bg-accent-alt" />
+              </div>
+              <span className="font-mono text-xs text-text-secondary">portfolio.tsx</span>
+            </div>
+
+            <div className="space-y-4 font-mono text-sm">
+              <div className="rounded-lg border border-border-custom bg-bg-primary/60 p-4">
+                <p className="text-text-secondary">const developer = {'{'}</p>
+                <p className="pl-4 text-text-primary">name: <span className="text-accent-alt">&apos;Gautam&apos;</span>,</p>
+                <p className="pl-4 text-text-primary">focus: <span className="text-accent-alt">&apos;React + Next.js&apos;</span>,</p>
+                <p className="pl-4 text-text-primary">style: <span className="text-accent-alt">&apos;Clean UI motion&apos;</span></p>
+                <p className="text-text-secondary">{'}'}</p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3">
+                {[
+                  { icon: <Code2 size={16} />, label: 'Code' },
+                  { icon: <Palette size={16} />, label: 'Design' },
+                  { icon: <Sparkles size={16} />, label: 'Motion' },
+                ].map((item) => (
+                  <div key={item.label} className="rounded-lg border border-accent/20 bg-accent/10 p-3 text-center text-accent">
+                    <div className="mx-auto mb-2 flex justify-center">{item.icon}</div>
+                    <p className="text-[11px] uppercase tracking-wider">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

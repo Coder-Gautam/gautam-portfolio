@@ -54,10 +54,10 @@ export const Experience: React.FC = () => {
             {experienceData.map((job, idx) => (
               <div key={job.company + idx} className="relative pl-8 md:pl-10 group">
                 {/* Timeline Dot Node */}
-                <span className="absolute -left-[9px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#0a0a0a] border-2 border-border-custom group-hover:border-accent transition-colors duration-300">
+                <span className="absolute -left-[9px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-bg-primary border-2 border-border-custom group-hover:border-accent transition-colors duration-300">
                   <span className={`h-1.5 w-1.5 rounded-full ${
                     job.type === 'Present' 
-                      ? 'bg-accent shadow-[0_0_8px_rgba(57,255,20,1)]' 
+                      ? 'bg-accent shadow-[0_0_12px_rgba(124,92,255,0.85)]' 
                       : 'bg-text-secondary group-hover:bg-accent'
                   } transition-colors duration-300`} />
                 </span>

@@ -69,7 +69,7 @@ export const Navbar: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full h-16 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#0a0a0a]/80 backdrop-blur-md border-b border-border-custom' 
+        ? 'bg-bg-primary/80 backdrop-blur-md border-b border-border-custom shadow-[0_10px_40px_rgba(0,0,0,0.18)]' 
         : 'bg-transparent border-b border-transparent'
     }`}>
       <div className="max-w-6xl mx-auto h-full px-4 md:px-8 flex items-center justify-between">
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
             setActiveSection('');
           }}
         >
-          GC<span className="text-[#f0f0f0]">.</span>
+          GC<span className="text-text-primary">.</span>
         </a>
 
         {/* Desktop Links */}
@@ -101,7 +101,7 @@ export const Navbar: React.FC = () => {
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent rounded shadow-[0_0_8px_rgba(57,255,20,0.8)]" />
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent to-accent-alt rounded shadow-[0_0_12px_rgba(124,92,255,0.55)]" />
                 )}
               </a>
             );
@@ -111,7 +111,7 @@ export const Navbar: React.FC = () => {
           <a
             href="#contact"
             onClick={(e) => handleLinkClick(e, '#contact')}
-            className="px-4 py-1.5 border border-accent text-accent hover:bg-accent hover:text-[#0a0a0a] rounded transition-all duration-300 font-medium"
+            className="px-4 py-1.5 border border-accent text-accent hover:bg-accent hover:text-white rounded-md transition-all duration-300 font-medium"
           >
             Hire Me
           </a>
@@ -128,7 +128,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Navigation Overlay */}
-      <div className={`fixed inset-0 top-16 w-full h-[calc(100vh-64px)] bg-[#0a0a0a]/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 font-mono text-lg transition-all duration-300 z-40 md:hidden ${
+      <div className={`fixed inset-0 top-16 w-full h-[calc(100vh-64px)] bg-bg-primary/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 font-mono text-lg transition-all duration-300 z-40 md:hidden ${
         isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'
       }`}>
         {navLinks.map((link) => {
@@ -149,7 +149,7 @@ export const Navbar: React.FC = () => {
         <a
           href="#contact"
           onClick={(e) => handleLinkClick(e, '#contact')}
-          className="px-6 py-2 border border-accent text-accent hover:bg-accent hover:text-[#0a0a0a] rounded transition-all duration-300 font-semibold"
+          className="px-6 py-2 border border-accent text-accent hover:bg-accent hover:text-white rounded-md transition-all duration-300 font-semibold"
         >
           Hire Me
         </a>
