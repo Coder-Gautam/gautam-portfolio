@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from './ui/SectionTitle';
 import { Mail, MapPin, Linkedin, Send, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { submitContactForm } from '@/app/actions';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -32,36 +33,18 @@ export const Contact: React.FC = () => {
     setStatus('submitting');
 
     try {
-      // Formspree Integration
-      // To configure: Replace the endpoint or create a form on Formspree and paste the URL.
-      // By default we fallback to a fetch to submit form data or mock successful submit.
-      const FORMSPREE_ENDPOINT = 'https://formspree.io/f/placeholder'; // Placeholder for user customization
-      
-      if (FORMSPREE_ENDPOINT.includes('placeholder')) {
-        // Mock successful API post
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+      const result = await submitContactForm(formData);
+
+      if (result.success) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
       } else {
-        const response = await fetch(FORMSPREE_ENDPOINT, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        });
-
-        if (response.ok) {
-          setStatus('success');
-          setFormData({ name: '', email: '', message: '' });
-        } else {
-          throw new Error('Something went wrong. Please try again.');
-        }
+        setStatus('error');
+        setErrorMessage(result.error || 'Something went wrong. Please try again.');
       }
     } catch (err: unknown) {
       setStatus('error');
-      setErrorMessage(err instanceof Error ? err.message : 'Failed to submit form. Please contact me directly via email.');
+      setErrorMessage('Failed to submit form. Please contact me directly via email.');
     }
   };
 
@@ -77,7 +60,7 @@ export const Contact: React.FC = () => {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6, ease: 'easeOut' as const }}
         >
-          <SectionTitle label="04. CONTACT" title="Let&apos;s Work Together" />
+          <SectionTitle label="06. CONTACT" title="Let&apos;s Work Together" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             {/* Direct Details & Info */}

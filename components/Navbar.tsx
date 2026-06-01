@@ -7,6 +7,7 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Services', href: '#services' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -25,7 +26,7 @@ export const Navbar: React.FC = () => {
       }
 
       // Highlight active section on scroll
-      const sections = ['about', 'experience', 'projects', 'contact'];
+      const sections = ['about', 'experience', 'projects', 'services', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {

@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowDown, Sparkles, Code2, Palette } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
+import Terminal from './Terminal';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -154,41 +155,10 @@ export const Hero: React.FC = () => {
           className="relative hidden lg:block"
         >
           <motion.div
-            className="glass-panel relative mx-auto w-full max-w-md rounded-2xl p-6"
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <div className="mb-6 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-red-400" />
-                <span className="h-3 w-3 rounded-full bg-yellow-300" />
-                <span className="h-3 w-3 rounded-full bg-accent-alt" />
-              </div>
-              <span className="font-mono text-xs text-text-secondary">portfolio.tsx</span>
-            </div>
-
-            <div className="space-y-4 font-mono text-sm">
-              <div className="rounded-lg border border-border-custom bg-bg-primary/60 p-4">
-                <p className="text-text-secondary">const developer = {'{'}</p>
-                <p className="pl-4 text-text-primary">name: <span className="text-accent-alt">&apos;Gautam&apos;</span>,</p>
-                <p className="pl-4 text-text-primary">focus: <span className="text-accent-alt">&apos;React + Next.js&apos;</span>,</p>
-                <p className="pl-4 text-text-primary">style: <span className="text-accent-alt">&apos;Clean UI motion&apos;</span></p>
-                <p className="text-text-secondary">{'}'}</p>
-              </div>
-
-              <div className="grid grid-cols-3 gap-3">
-                {[
-                  { icon: <Code2 size={16} />, label: 'Code' },
-                  { icon: <Palette size={16} />, label: 'Design' },
-                  { icon: <Sparkles size={16} />, label: 'Motion' },
-                ].map((item) => (
-                  <div key={item.label} className="rounded-lg border border-accent/20 bg-accent/10 p-3 text-center text-accent">
-                    <div className="mx-auto mb-2 flex justify-center">{item.icon}</div>
-                    <p className="text-[11px] uppercase tracking-wider">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Terminal />
           </motion.div>
         </motion.div>
       </div>

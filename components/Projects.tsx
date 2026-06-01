@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from './ui/SectionTitle';
-import { Github, ExternalLink, Award, Sparkles, Star } from 'lucide-react';
+import { Github, ExternalLink, Award, Sparkles, Star, Layout } from 'lucide-react';
 
 const projectsData = [
   {
@@ -63,6 +63,17 @@ const cardVariants = {
 };
 
 export const Projects: React.FC = () => {
+  const featuredProject = {
+    title: 'TestNHire Administrative Dashboard',
+    description: 'A comprehensive administrative dashboard built for managing candidate evaluations, test results, and user permissions. Features real-time data visualization, modular frontend components, and a robust security layer.',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'Redux', 'Chart.js'],
+    highlight: 'Production Ready | Scalable Architecture',
+    links: {
+      github: '#',
+      external: '#'
+    }
+  };
+
   return (
     <section id="projects" className="w-full py-20 bg-bg-primary relative overflow-hidden">
       {/* Visual neon light leak */}
@@ -76,6 +87,70 @@ export const Projects: React.FC = () => {
           transition={{ duration: 0.6, ease: 'easeOut' as const }}
         >
           <SectionTitle label="03. PROJECTS" title="Selected Works" />
+
+          {/* Featured Project */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mt-12 mb-16 relative group"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-accent-alt/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-50" />
+            <div className="relative bg-bg-card border border-border-custom hover:border-accent/40 rounded-2xl p-8 md:p-12 overflow-hidden flex flex-col lg:flex-row gap-12 items-center">
+              <div className="flex-1 space-y-6">
+                <div className="flex items-center gap-2 text-accent font-mono text-xs font-bold tracking-[0.2em] uppercase">
+                  <Sparkles size={14} />
+                  <span>Featured Project</span>
+                </div>
+                
+                <h3 className="text-3xl md:text-4xl font-bold text-text-primary group-hover:text-accent transition-colors duration-300">
+                  {featuredProject.title}
+                </h3>
+                
+                <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-xl">
+                  {featuredProject.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {featuredProject.tags.map(tag => (
+                    <span key={tag} className="px-3 py-1 bg-accent/10 border border-accent/20 rounded-full text-xs font-mono text-accent">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center gap-6 pt-4">
+                  <a href="#" className="flex items-center gap-2 text-text-primary hover:text-accent transition-colors duration-300 font-mono text-sm font-bold">
+                    <ExternalLink size={20} />
+                    View Case Study
+                  </a>
+                  <a href="#" className="flex items-center gap-2 text-text-secondary hover:text-accent transition-colors duration-300 font-mono text-sm">
+                    <Github size={20} />
+                    Source Code
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex-1 w-full lg:w-auto relative group-hover:scale-[1.02] transition-transform duration-500">
+                <div className="aspect-video bg-bg-secondary border border-border-custom rounded-xl overflow-hidden shadow-2xl relative">
+                   <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent pointer-events-none" />
+                   <div className="flex items-center justify-center h-full">
+                      <Layout size={80} className="text-accent/20" />
+                   </div>
+                   {/* This would be an image tag in a real project */}
+                   <div className="absolute bottom-4 left-4 right-4 p-4 bg-bg-primary/80 backdrop-blur-md border border-border-custom rounded-lg flex items-center justify-between">
+                      <span className="text-xs font-mono text-accent font-bold uppercase tracking-widest">{featuredProject.highlight}</span>
+                      <div className="flex gap-1">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                        <div className="w-2 h-2 rounded-full bg-accent/40" />
+                        <div className="w-2 h-2 rounded-full bg-accent/20" />
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Grid Layout */}
           <motion.div 
