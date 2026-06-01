@@ -42,7 +42,7 @@ export const Contact: React.FC = () => {
         setStatus('error');
         setErrorMessage(result.error || 'Something went wrong. Please try again.');
       }
-    } catch (err: unknown) {
+    } catch {
       setStatus('error');
       setErrorMessage('Failed to submit form. Please contact me directly via email.');
     }
